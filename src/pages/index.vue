@@ -3,7 +3,7 @@
       <h1>Home</h1>
     </div>
 </template>
-  
+<!-- git subtree push --prefix dist origin gh-pages -->
 <script setup>
     import { useHead } from 'unhead';
 

@@ -1,23 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/Home.vue';
-import About from '../components/About.vue';
+import routes from 'virtual:generated-pages';  // Import auto-generated routes
 
-const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home,
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About,
-    }
-];
-    
 const router = createRouter({
-        history: createWebHistory('/'),
-        routes,
+  history: createWebHistory('/'),
+  routes,  // Use auto-generated routes from vite-plugin-pages
 });
-  
+
 export default router;
