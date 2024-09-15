@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import Pages from 'vite-plugin-pages';
-import { createHead } from 'unhead';
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import Pages from 'vite-plugin-pages'
 
 export default defineConfig({
   plugins: [
-    vue(),        // Vue plugin for Vite
-    Pages(),      // Automatic route generation
-    createHead()  // Head management for SEO and meta tags
-  ]
-});
+    vue(),
+    Pages({
+      // Options for customizing route generation
+      extensions: ['vue'], // Only generate routes for .vue files
+    }),
+  ],
+})
